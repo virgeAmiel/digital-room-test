@@ -1,0 +1,57 @@
+html {
+  background-color: #f8f9fa;
+}
+
+body {
+  margin: auto;
+  max-width: 1350px;
+}
+
+.navbar {
+  display: flex;
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: black;
+}
+
+.navbar > * {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar .icon img {
+  margin: 10px;
+}
+
+.nav-item {
+  margin-right: 30px;
+  text-transform: uppercase;
+  display: inline-flex;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item button {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  font: inherit;
+  text-transform: inherit;
+  background-color: inherit;
+}
+
+.caret-down {
+  background-image: url("./images/images/61dc3933141488d59361259c_DownIco.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  margin: auto;
+}
