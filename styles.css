@@ -123,6 +123,7 @@ h1 {
   font-family: "Readex Pro", sans-serif;
   font-size: 1.1em;
   margin-top: 20px;
+  margin-bottom: 20px;
   background-color: inherit;
   border-radius: 30px;
   min-width: 150px;
@@ -295,4 +296,5 @@ h1 {
 
 .sub-grid h2 {
   font-size: 2em;
+  margin: 0px;
 }
