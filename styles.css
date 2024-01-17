@@ -21,6 +21,7 @@ h1 {
 .navbar {
   display: flex;
   background-color: white;
+  width: 100%;
   font-weight: bold;
   font-size: 14px;
   color: black;
@@ -75,10 +76,31 @@ h1 {
   margin-top: 20px;
 }
 
+.grid-container > * {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .grid-container > * {
+    flex-direction: column;
+  }
+}
+
+.sub-grid {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 20px 0px;
+  margin-top: 20px;
+}
+
 /* carousel */
 
 .carousel {
-  display: flex;
   grid-column: span 4;
   width: 90%;
   background-color: #dce5e2;
@@ -96,7 +118,7 @@ h1 {
   margin: 10px;
 }
 
-.carousel-info button {
+.explore-btn {
   cursor: pointer;
   font-family: "Readex Pro", sans-serif;
   font-size: 1.1em;
@@ -120,24 +142,22 @@ h1 {
   border-radius: 25px;
 }
 
-/* categories section*/
+/* categories */
 
 .section-head {
-  display: flex;
   flex-direction: column;
   font-family: "Readex Pro", sans-serif;
   grid-column: span 4;
-  width: 60%;
+  width: 100%;
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
   align-items: center;
   font-size: 12px;
-  background-color: inherit;
 }
 
 .section-head span {
-  width: 90%;
+  width: 50%;
 }
 
 .category-head {
@@ -145,9 +165,7 @@ h1 {
 }
 
 .laptops {
-  display: flex;
   grid-column: span 2;
-  justify-self: right;
   position: relative;
   width: 600px;
   height: 500px;
@@ -173,7 +191,6 @@ h1 {
 }
 
 .phones {
-  display: flex;
   position: relative;
   grid-row: span 2;
   text-align: center;
@@ -200,10 +217,8 @@ h1 {
 }
 
 .tablet {
-  display: flex;
   position: relative;
   grid-row: span 2;
-  justify-self: left;
   width: 300px;
   height: 800px;
   background-color: white;
@@ -226,10 +241,8 @@ h1 {
 }
 
 .watch {
-  display: flex;
   position: relative;
   grid-column: span 2;
-  justify-self: right;
   width: 600px;
   height: 280px;
   background-color: white;
@@ -247,4 +260,39 @@ h1 {
   width: 150px;
   top: 100px;
   right: 25px;
+}
+
+/* items */
+
+.item {
+  width: 300px;
+  flex-direction: column;
+}
+
+.item-image {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  background-color: white;
+}
+
+.item img {
+  margin: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* see the best around here */
+.sub-grid .head {
+  margin: 20px;
+  grid-column: span 4;
+}
+
+.sub-grid .item {
+  background-color: #f8f9fa;
+  border-radius: 20px;
+}
+
+.sub-grid h2 {
+  font-size: 2em;
 }
